@@ -4,7 +4,7 @@ pragma solidity ^0.8.22;
 import {Drop} from "./Drop.sol";
 import {Clones} from "@openzeppelin/contracts/proxy/Clones.sol";
 
-contract DropFractory {
+contract DropFactory {
     event DropCrafted(Drop indexed drop, address indexed owner);
     Drop dropImpl;
 
@@ -20,6 +20,10 @@ contract DropFractory {
         Clones.cloneDeterministic(address(dropImpl), salt);
 
         drop.initialize(msg.sender, name, symbol);
+    }
+
+    function dropImplementation () public view returns (address) {
+        return address(dropImpl);
     }
 
     function predictDropAddress(bytes32 salt_) public view returns (address drop) {
