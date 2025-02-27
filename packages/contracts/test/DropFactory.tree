@@ -1,0 +1,9 @@
+DropFractory
+└── when initializing the factory
+    └── it should have the correct drop implementation
+└── when deploying a new drop
+    └── it should have the correct address
+    └── it should have have the correct owner
+    └── it should have the correct name
+    └── it should have the correct symbol
+    └── it should emit the DropCrafted event

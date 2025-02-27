@@ -5,6 +5,8 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0",
+    "contracts": "^0.4.0",
     "next": "~15.1.4",
     "react": "19.0.0",
     "react-dom": "19.0.0"
